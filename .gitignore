@@ -20,3 +20,15 @@ target/
 /idea/
 *.ipr
 *.iml
+*.iws
+
+#temp file
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+#system ignore
+.DS_Store
+Thumbs.db
