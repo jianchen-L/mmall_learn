@@ -44,4 +44,55 @@ public class Const {
             return code;
         }
     }
+
+    public enum OrderStatusEnum {
+        CANCELED(0, "cancelled"),
+        NO_PAY(1, "unpaid"),
+        PAID(20, "paid"),
+        SHIPPED(40, "shipped"),
+        ORDER_SUCCESS(50, "order completed"),
+        ORDER_CLOSED(60, "order closed");
+
+        private String value;
+        private int code;
+        OrderStatusEnum(int code, String value) {
+            this.code = code;
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public int getCode() {
+            return code;
+        }
+    }
+
+    public interface AlipayCallback {
+        String TRADE_STATUS_WAIT_BUYER_PAY = "WAIT_BUYER_PAY";
+        String TRADE_STATUS_TRADE_SUCCESS = "TRADE_SUCCESS";
+
+        String RESPONSE_SUCCESS = "success";
+        String RESPONSE_FAILED = "failed";
+    }
+
+    public enum PayPlatformEnum {
+        ALIPAY(1, "alipay");
+
+        private String value;
+        private int code;
+        PayPlatformEnum(int code, String value) {
+            this.code = code;
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public int getCode() {
+            return code;
+        }
+    }
 }
